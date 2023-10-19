@@ -18,40 +18,41 @@ public class spiralMatrix {
     }
 
 
-    public static void  printSpiral(int[][] arr){
+    public static void printSpiral(int[][] arr ){
 
-        int rowStart=0;
-        int colStart=0;
-        int rowEnd=arr.length-1;
-        int colEnd=arr[0].length-1;
+        int n = arr.length-1;
+        int m = arr[0].length-1;
 
+        int p = 0;
+        int q = 0;
 
-        while(colEnd>=colStart && rowStart <=rowEnd){
+        int r = m;
+        int s = n;
 
-            for(int i=colStart;i<=colEnd;i++){
-                System.out.print(arr[rowStart][i] +"  ");
-            }
-            rowStart++;
-
-            for(int j=rowStart;j<=rowEnd;j++){
-                System.out.print(arr[j][colEnd] +"  ");
-                }
-
-            colEnd--;
-
-            for(int k=colEnd;k>=colStart;k--){
-                System.out.print(arr[rowEnd][k] +"  ");
+        while(p <= r && q<=s) {
+            for (int i = p; i <= r; i++) {
+                System.out.print(arr[q][i] + " ");
             }
 
-            rowEnd--;
-            for(int l=rowEnd;l>=rowStart;l--){
-                System.out.print(arr[l][colStart] +"  ");
+            q++;
+
+            for (int j = q; j <= s; j++) {
+                System.out.print(arr[j][r] + " ");
             }
 
-            colStart++;
+            r--;
 
+            for (int k = r; k >= p; k--) {
+                System.out.print(arr[s][k] + " ");
+            }
 
+            s--;
 
+            for (int l = s; l >= q; l--) {
+                System.out.print(arr[l][p] + " ");
+            }
+
+            p++;
         }
 
 

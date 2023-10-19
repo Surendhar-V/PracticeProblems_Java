@@ -1,22 +1,30 @@
-package leetcode.Linkedlist;
+package Linkedlist;
 
-public class doublelinkedlist {
-
-
-    private Node head ;
-    private Node tail ;
-
-    private Node temp ;
-    private int size = 0;
+public class linkedlist {
 
 
+   public Node head ;
+    public Node tail ;
 
+    public Node temp ;
+    public int size = 0;
+
+    public Node getHead() {
+        return head;
+    }
+
+    public linkedlist() {
+        this.head = null;
+        this.tail = null;
+        Node newnode = new Node();
+        newnode.next = null ;
+        this.size = 0 ;
+    }
 
     public void insertFirst(int value){
 
         Node node = new Node(value);
         node.next= head;
-        node.previous = null ;
         head = node;
         size+=1;
         if(tail == null){
@@ -28,24 +36,25 @@ public class doublelinkedlist {
 
     public void insertLast(int value){
 
+
         Node node = new Node(value);
-        if(tail== null){
+
+        if(tail == null)
+        {
+
             tail = node ;
-            node.next = null ;
-            node.previous = null ;
+
         }
-        else {
-            tail.next = node;
-            node.next = null;
-            node.previous = tail;
-            tail = node;
-            size += 1;
-        }
+
+        tail.next = node;
+        tail = node;
+        size+=1;
 
         if(head == null){
             head = tail ;
 
         }
+
 
     }
 
@@ -80,8 +89,6 @@ public class doublelinkedlist {
 
             Node node = new Node(value);
             node.next = temp.next;
-            temp.next.previous = node ;
-            node.previous = temp;
             temp.next = node;
 
         }
@@ -94,9 +101,6 @@ public class doublelinkedlist {
         pos-=2;
         temp = head ;
 
-        if(size == 0){
-            return;
-        }
 
         while (pos != 0) {
 
@@ -107,7 +111,7 @@ public class doublelinkedlist {
         }
 
         temp.next=temp.next.next;
-        temp.next.next.previous =temp;
+
 
     }
 
@@ -120,21 +124,6 @@ public class doublelinkedlist {
             System.out.print(temp.value + "  ");
             temp = temp.next;
         }
-        System.out.println();
-
-    }
-    public void printreverse(){
-
-        temp=tail;
-        while(temp != null){
-
-            System.out.print(temp.value + "  ");
-            temp = temp.previous;
-
-
-        }
-        System.out.println();
-
 
 
     }
@@ -151,9 +140,8 @@ public class doublelinkedlist {
 
     public class Node{
 
-        private Node previous;
-        private int  value ;
-        private Node next ;
+        public int  value ;
+        public Node next ;
 
         public Node() {
         }

@@ -1,4 +1,4 @@
-package leetcode.Linkedlist;
+package Linkedlist;
 
 class Happynumber {
 

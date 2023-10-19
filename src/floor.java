@@ -1,7 +1,7 @@
 /*
 
 INTUITION - When the binary search return -1 , It means the while condition became terminated.
-            At the stage of termination , the Start pointer will be pointing to the element greater than the target element [ leetcode.binary_search.ceiling]
+            At the stage of termination , the Start pointer will be pointing to the element greater than the target element [ ceiling]
             And the end pointer will be pointing to the element lesser than the target element. [ floor ]
  */
 

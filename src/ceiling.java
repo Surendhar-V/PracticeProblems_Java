@@ -1,14 +1,3 @@
-package leetcode.binary_search;/*
-
-https://leetcode.com/problems/search-insert-position/submissions/
-
-
-INTUITION - When the binary search return -1 , It means the while condition became terminated.
-            At the stage of termination , the Start pointer will be pointing to the element greater than the target element [ leetcode.binary_search.ceiling]
-            And the end pointer will be pointing to the element lesser than the target element. [ floor ]
- */
-
-
 public class ceiling{
   
   public static void main(String[] args){
@@ -18,7 +7,7 @@ public class ceiling{
     System.out.println(bs(arr,search));
   }
   
-  //printing the leetcode.binary_search.ceiling of the number
+  //printing the ceiling of the number
   
   public static int bs(int[] arr , int search){
   

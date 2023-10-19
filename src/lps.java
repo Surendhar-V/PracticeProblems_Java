@@ -74,7 +74,7 @@ int index=0;
 
 
 
-String res ="";
+        String res ="";
 
         for(int i=index-max;i<=index+max;i++){
 
@@ -82,13 +82,7 @@ String res ="";
             res = res + Plist.get(i);
         }
 
-
         }
-
-
-
-
-
 
 
         return res;

@@ -1,30 +1,22 @@
-package leetcode.Linkedlist;
+package Linkedlist;
 
-public class linkedlist {
+public class doublelinkedlist {
 
 
-   public Node head ;
-    public Node tail ;
+    private Node head ;
+    private Node tail ;
 
-    public Node temp ;
-    public int size = 0;
+    private Node temp ;
+    private int size = 0;
 
-    public Node getHead() {
-        return head;
-    }
 
-    public linkedlist() {
-        this.head = null;
-        this.tail = null;
-        Node newnode = new Node();
-        newnode.next = null ;
-        this.size = 0 ;
-    }
+
 
     public void insertFirst(int value){
 
         Node node = new Node(value);
         node.next= head;
+        node.previous = null ;
         head = node;
         size+=1;
         if(tail == null){
@@ -36,25 +28,24 @@ public class linkedlist {
 
     public void insertLast(int value){
 
-
         Node node = new Node(value);
-
-        if(tail == null)
-        {
-
+        if(tail== null){
             tail = node ;
-
+            node.next = null ;
+            node.previous = null ;
         }
-
-        tail.next = node;
-        tail = node;
-        size+=1;
+        else {
+            tail.next = node;
+            node.next = null;
+            node.previous = tail;
+            tail = node;
+            size += 1;
+        }
 
         if(head == null){
             head = tail ;
 
         }
-
 
     }
 
@@ -89,6 +80,8 @@ public class linkedlist {
 
             Node node = new Node(value);
             node.next = temp.next;
+            temp.next.previous = node ;
+            node.previous = temp;
             temp.next = node;
 
         }
@@ -101,6 +94,9 @@ public class linkedlist {
         pos-=2;
         temp = head ;
 
+        if(size == 0){
+            return;
+        }
 
         while (pos != 0) {
 
@@ -111,7 +107,7 @@ public class linkedlist {
         }
 
         temp.next=temp.next.next;
-
+        temp.next.next.previous =temp;
 
     }
 
@@ -124,6 +120,21 @@ public class linkedlist {
             System.out.print(temp.value + "  ");
             temp = temp.next;
         }
+        System.out.println();
+
+    }
+    public void printreverse(){
+
+        temp=tail;
+        while(temp != null){
+
+            System.out.print(temp.value + "  ");
+            temp = temp.previous;
+
+
+        }
+        System.out.println();
+
 
 
     }
@@ -140,8 +151,9 @@ public class linkedlist {
 
     public class Node{
 
-        public int  value ;
-        public Node next ;
+        private Node previous;
+        private int  value ;
+        private Node next ;
 
         public Node() {
         }

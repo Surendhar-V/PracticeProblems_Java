@@ -1,17 +1,3 @@
-package leetcode.array;/*
-
-https://www.youtube.com/watch?v=yD7wV8SyPrc&t=1320s
-
-
-*/
-
-
-
-
-
-
-
-
 public class findmedian {
 
 
