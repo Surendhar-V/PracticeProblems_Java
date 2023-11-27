@@ -31,7 +31,7 @@ public class VotingSystem {
         Map<Object , Long> map = listOfMap.stream().flatMap(i -> i.entrySet().stream()).collect(Collectors.groupingBy(entry -> entry.getValue() , Collectors.counting()));
         System.out.println(map);
 
-        map.entrySet().stream().collect(Collectors.groupingBy();
+       // map.entrySet().stream().collect(Collectors.groupingBy();
     }
 
 }
