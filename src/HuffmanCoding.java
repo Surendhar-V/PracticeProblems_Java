@@ -1,8 +1,4 @@
-package dummy;
 
-import org.w3c.dom.Node;
-
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
@@ -18,23 +14,17 @@ public class HuffmanCoding {
 
        HashMap<Character , Integer> freq = new HashMap<>();
 
-
+       // Making the frequency arr
        for(int i=0 ; i<feeder.length() ; i++){
+            freq.put(feeder.charAt(i) , freq.getOrDefault(feeder.charAt(i) , 0)+1);
+        }
 
-           freq.put(feeder.charAt(i) , freq.getOrDefault(feeder.charAt(i) , 0)+1);
-
-       }
-
-        PriorityQueue<Node> pq = new PriorityQueue<>();
+       PriorityQueue<Node> pq = new PriorityQueue<>();
 
        for(Character temp : freq.keySet()){
-
            Integer frequency = freq.get(temp);
-
            Node node = new Node(temp , frequency);
-
            pq.add(node);
-
        }
 
        while(pq.size()!=1){
@@ -43,7 +33,6 @@ public class HuffmanCoding {
            Node left = pq.poll();
 
            //Combining
-
            Node newNode = new Node('\0' , right.value+left.value);
 
            newNode.right = right;
@@ -100,19 +89,14 @@ public class HuffmanCoding {
             temp+=s.charAt(i);
 
             if(decoder.containsKey(temp)){
-
                 res+=decoder.get(temp);
-
                 temp = "";
             }
-
 
         }
 
         return res;
     }
-
-
 
     public static class Node  implements Comparable<Node>{
 

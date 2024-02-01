@@ -9,6 +9,7 @@ enum traversal{
     traversal(int value){
         this.value = value;
     }
+
     }
 
 public class BinarySearchTree {
@@ -84,7 +85,6 @@ public class BinarySearchTree {
 
         if(option==traversal.INORDER){
             inorder(root);
-
         }else if(option == traversal.POSTORDER){
             postorderTraversal(root);
         }else{

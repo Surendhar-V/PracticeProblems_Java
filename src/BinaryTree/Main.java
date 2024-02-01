@@ -14,31 +14,35 @@ public class Main {
 //        tree.display();
 //        tree.preetyPrint();
 
-        BinarySearchTree bst = new BinarySearchTree();
+//        BinarySearchTree bst = new BinarySearchTree();
+//
+//        bst.addArray(new int[] {10,5,15,4,6,12,16,3,2});
 
-        bst.addArray(new int[] {4,2,6,1,3,5,7});
-
-        bst.preetyPrint();
-        bst.traverse(traversal.POSTORDER);
-        bst.traverse(traversal.INORDER);
-        System.out.println(bst.isBalanced());
-
-
+//        bst.addSortedArray(new int[]{5,4,3,2,1});
+//        bst.preetyPrint();
+//        System.out.println(bst.isBalanced());
+//        bst.traverse(traversal.POSTORDER);
+//        bst.traverse(traversal.INORDER);
+//        System.out.println(bst.isBalanced());
+//
+//
         AVL tree = new AVL();
 
-        int[] arr = {20,17,23,14,18,24,11,15,16};
-
-        //int[] arr = {10,9,20,30,28};
-
+        int[] arr = {50 , 40 , 60 , 30 ,48 , 20 , 10};
+//
+//        //int[] arr = {10,9,20,30,28};
+//
         tree.insertArr(arr);
-        BinarySearchTree tree2 = new BinarySearchTree();
-        tree2.addArray(arr);
+//        BinarySearchTree tree2 = new BinarySearchTree();
+//        tree2.addArray(arr);
+
 
         tree.preetyPrint();
-        System.out.println();
-        System.out.println();
-        tree2.preetyPrint();
-        System.out.println(tree2.isBalanced());
+
+//        System.out.println();
+//        System.out.println();
+//        tree2.preetyPrint();
+//        System.out.println(tree2.isBalanced());
 
 
 

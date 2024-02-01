@@ -1,101 +1,51 @@
-class dummy{
+import java.util.*;
 
-    public static void main(String[] args){
+class dummy {
 
-      node obj1 = new node(1);
-      obj1.right = new node(2);
-      obj1.left = new node(3);
+    public static void main(String[] args) {
 
-      obj1.right.right = new node(4);
-      obj1.right.left = new node(5);
-
-      obj1.left.right = new node(6);
-      obj1.left.left = new node(7);
-
-      insert(obj1 , 10);
-      insert(obj1 , 11);
-      preOrder(obj1);
+        prime(1 , 100);
 
     }
 
-    public static void preOrder(node node){
+    private static void prime(int start , int end){
 
-        if(node == null){
-            return;
+        for(int i = start ; i<end ; i++){
+            if(isPrime(i)){
+                System.out.print(i + " ");
+            }
         }
 
-        System.out.println(node.value);
-
-        preOrder(node.left);
-        preOrder(node.right);
-
-
     }
 
-    public static void inOrder(node node){
 
-        if(node == null){
-            return;
+    private static boolean isPrime(int i){
+
+        if(i == 1){
+            return false;
         }
-
-        inOrder(node.left);
-
-        System.out.println(node.value);
-
-        inOrder(node.right);
-
-    }
-
-    public static void postOrder(node node){
-
-    if(node == null){
-        return;
-    }
-
-    postOrder(node.left);
-    postOrder(node.right);
-
-
-    System.out.println(node.value);
-
-    }
-
-    public static boolean insert(node node , int value){
-
-        if(node.left==null){
-            node.left = new node(value);
-            return true;
-        }else if(node.right == null){
-            node.right = new node(value);
+        if(i == 2 || i == 3){
             return true;
         }
-
-        if(insert(node.left , value)){
-          return true;
+        if(i%2 == 0 || i%3 == 0){
+            return false;
         }
 
-        if(insert(node.right , value)){
-            return true;
+        for(int j=5 ;j<=Math.sqrt(i);j+=6){
+
+            if(i%j == 0 || i%(j+2) == 0){
+                return false;
+            }
+
         }
 
-        return false;
 
+        return true;
     }
 
-    static class node {
-
-        node right;
-        node left;
-        int value;
-
-        node(int value){
-            this.value = value;
-        }
 
 
 
-
-    }
 
 
 
