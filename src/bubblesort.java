@@ -27,11 +27,10 @@ public class bubblesort {
                     arr[j+1] = arr[j]^arr[j+1];
                     arr[j] = arr[j]^arr[j+1];
 
-                    // In order to swap using bitwise XOR ,
+                    // In order to swap using bitwise XOR
                     // the elements in array should be no zero
 
                 }
-
 
             }
         System.out.println(Arrays.toString(arr));
