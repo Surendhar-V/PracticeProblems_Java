@@ -3,10 +3,7 @@ package Linkedlist;
 class Happynumber {
 
 
-
     public static void main(String[] args){
-
-
 
         System.out.println(isHappy(19));
 
@@ -16,11 +13,10 @@ class Happynumber {
 
         int slow = n;
         int fast = n;
+
         do {
             slow = happy(slow);
             fast = happy(happy(fast));
-
-
 
             if( slow == 1){
                 return true ;

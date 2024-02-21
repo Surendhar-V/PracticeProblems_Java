@@ -27,11 +27,11 @@ public class allconstruct {
         for(int i =0;i<wordbank.length;i++) {
 
             String[][] temp =solution(target,newstring+wordbank[i],wordbank);
+
             if(temp!=null){
 
                 String[][] add_arr=add(wordbank[i],temp);
                 result=separate_store(result,add_arr);
-
 
             }
 
@@ -107,23 +107,13 @@ public class allconstruct {
 
 
         for(int i=0;i<result.length;i++){
-            for(int j=0;j<result[i].length;j++){
-
-
-                mix[i][j]=result[i][j];
-
-            }
+            System.arraycopy(result[i], 0, mix[i], 0, result[i].length);
         }
 
 
 
         for(int i=result.length;i<arr.length+result.length;i++){
-            for(int j=0;j<arr[i-(result.length)].length;j++){
-
-
-                mix[i][j]=arr[i-(result.length)][j];
-
-            }
+            System.arraycopy(arr[i - (result.length)], 0, mix[i], 0, arr[i - (result.length)].length);
         }
 
 

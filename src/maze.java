@@ -14,7 +14,7 @@ public class maze
         path(p , r ,c, maze,home,door);
     }
 
-    private static int[][] maze = { {1,1,0},
+    private static final int[][] maze = { {1,1,0},
             {1,2,1},
             {1,1,0}
     };

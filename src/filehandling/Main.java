@@ -2,6 +2,7 @@ package filehandling;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Main {
         OutputStream os = System.out;
         try {
 
-            byte[] smileyBytes = "\u263A".getBytes("UTF-8");
+            byte[] smileyBytes = "\u263A".getBytes(StandardCharsets.UTF_8);
             os.write(smileyBytes);
 
 

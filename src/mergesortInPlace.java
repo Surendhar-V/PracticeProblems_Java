@@ -75,11 +75,7 @@ public class mergesortInPlace{
         }
 
 
-        for(int l=s;l<=e;l++)
-        {
-            arr[l]=newarr[l];
-
-        }
+        if (e + 1 - s >= 0) System.arraycopy(newarr, s, arr, s, e + 1 - s);
 
 
 

@@ -2,7 +2,7 @@ package HashMap;
 
 public class HashMap
 {
-    private Entity[] arr;
+    private final Entity[] arr;
 
     HashMap(){
         arr= new Entity[100];

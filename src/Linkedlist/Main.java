@@ -15,7 +15,7 @@ public class Main {
 
         list.printvalues();
 
-        System.out.println("");
+        System.out.println();
 
 
         doublelinkedlist list1 = new  doublelinkedlist();

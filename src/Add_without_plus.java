@@ -1,5 +1,4 @@
-
-class Solution{
+class Add_without_plus{
     public static void main(String[] args) {
 
         int a = 5;

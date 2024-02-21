@@ -22,7 +22,6 @@ public class checksubsequence
 
             if(s1.charAt(p1) == s2.charAt(p2)){
 
-                flag &= true ;
                 p1++;
                 p2++;
 
@@ -35,7 +34,7 @@ public class checksubsequence
 
         if(p2 == s2.length() && p1 < s1.length()){
 
-            flag&= false ;
+            flag = false;
         }
         System.out.println(flag);
 

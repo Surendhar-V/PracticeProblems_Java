@@ -33,7 +33,7 @@ public class string_recursion
         }
         else{
 
-            return Character.toString(s.charAt(0)) + skipword(skip,s.substring(1));
+            return s.charAt(0) + skipword(skip,s.substring(1));
         }
 
     }
@@ -47,7 +47,6 @@ public class string_recursion
 
         if(end == s.length()-1){
             System.out.println(s.substring(start,end+1));
-            return;
         }
 
 

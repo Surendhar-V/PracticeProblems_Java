@@ -24,12 +24,7 @@ public class howsum {
 
 
 
-
-
-
-
-
-//        System.out.println(Arrays.toString(sum(7, new int[]{5, 3, 4, 7})));   //true
+    //        System.out.println(Arrays.toString(sum(7, new int[]{5, 3, 4, 7})));   //true
     //    System.out.println(Arrays.toString(sum(7778, new int[]{7, 14})));      //false
 
 
@@ -38,8 +33,6 @@ public class howsum {
     }
 
     public static Integer[] sum(int a , int[] arr){
-
-
 
 
         if( a ==0)

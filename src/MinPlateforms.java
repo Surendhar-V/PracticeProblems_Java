@@ -86,10 +86,7 @@ public class MinPlateforms {
             j++;
         }
 
-        for (int l = 0; l < mix.length; l++) {
-            index[start + l] = mix[l];
-
-        }
+        System.arraycopy(mix, 0, index, start + 0, mix.length);
     }
 
 

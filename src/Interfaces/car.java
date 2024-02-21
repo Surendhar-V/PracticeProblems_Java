@@ -18,12 +18,10 @@ public class car implements Engine , brake , media {
         System.out.println("engine accelerated ");
     }
 
-
     @Override
     public void Brake() {
 
         System.out.println("Brake applied");
     }
-
 
 }

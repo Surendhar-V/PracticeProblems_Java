@@ -13,12 +13,13 @@ public class KMP{
 
     public static int kmp(String s1 , String s2){
 
-        int[] crr = lps1(s2.toCharArray());
+        int[] crr = lps1(s1.toCharArray());
 
+        System.out.println(Arrays.toString(crr));
 
-        int res = lps2(s1.toCharArray() , s2.toCharArray() , crr);
-
-        return res;
+//        int res = lps2(s1.toCharArray() , s2.toCharArray() , crr);
+//
+        return 0;
 
     }
 

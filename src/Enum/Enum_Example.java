@@ -26,11 +26,8 @@ public class Enum_Example {
         System.out.println(week.ordinal());
 
 
-
-
-
         week.hellomessage();
-        System.out.println("");
+        System.out.println();
 
         Week[] arr=Week.values();
         for(Week day : arr){

@@ -21,7 +21,6 @@ public class alphabetsequence{
         if( a <= 26){
 
             System.out.print(arr[a-1]);
-            return ;
         }
 
 
@@ -40,11 +39,9 @@ public class alphabetsequence{
 
                 if( r == 0){
                     System.out.print("Z");
-                    return ;
                 }
                 else{
                     System.out.print(arr[r-1]);
-                    return ;
                 }
 
             }
@@ -73,7 +70,6 @@ public class alphabetsequence{
                 else{
                     System.out.print(arr[r-1]);
                 }
-                return ;
             }
 
             else if ( a <= 2000){
@@ -99,7 +95,6 @@ public class alphabetsequence{
 
                     System.out.print(arr[r-1]);
                 }
-                return ;
             }
 
 

@@ -24,12 +24,14 @@ public class progressbar {
             {
                 if(i<10){
                     System.out.print(i+"%");
-                    try{t.sleep(10);} catch(Exception e){}
+                    try{
+                        sleep(10);} catch(Exception e){}
                     System.out.print("\b\b");
                 }
                 else if(i>=10&&i<=99){
                     System.out.print(i+"%");
-                    try{t.sleep(50);} catch(Exception e){}
+                    try{
+                        sleep(50);} catch(Exception e){}
                     System.out.print("\b\b\b");
                 }
                 else

@@ -7,7 +7,7 @@ excersice(int a ){
 }
 
 
-final int NAME = 001;
+    final int NAME = 4;
     @Override
     void walk() {
         System.out.println("walking");

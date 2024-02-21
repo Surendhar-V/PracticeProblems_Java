@@ -106,8 +106,9 @@ public class Main {
 
        for(int a: l1){
            for( int b:l2){
-               if( a == b){
-                   common =a;
+               if (a == b) {
+                   common = a;
+                   break;
                }
 
            }
@@ -127,9 +128,7 @@ public class Main {
             }
 
             if (board[currentX][currentY + 1] == currentBlock) {
-
                 return isSafe1(board, currentX, currentY + 1, currentBlock, i);
-
             }
 
         } else if (i == 2) {

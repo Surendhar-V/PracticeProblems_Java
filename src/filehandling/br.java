@@ -11,7 +11,7 @@ public class br {
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(isr);
 
-        String input = new String();
+        String input = "";
 
         try{
 

@@ -14,10 +14,10 @@ package factoryConstructor_dart;
 
 
      public  Object switchmyclass(){
-         if((((Object)this.data).getClass().getSimpleName()).equals("Integer")){
+         if((this.data.getClass().getSimpleName()).equals("Integer")){
              return new B((Integer)this.data);
          }
-         else if ((((Object)this.data).getClass().getSimpleName()).equals("Double"))
+         else if ((this.data.getClass().getSimpleName()).equals("Double"))
          {
              return new C((Double) this.data );
          }

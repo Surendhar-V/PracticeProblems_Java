@@ -1,12 +1,10 @@
-package comparator;
+package comparable;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-
 
         Student vikram  = new Student(11 , 90 );
         Student virat  = new Student(13 , 45 );
@@ -25,8 +23,5 @@ public class Main {
 
 
     }
-
-
-
 
 }

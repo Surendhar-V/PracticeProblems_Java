@@ -23,6 +23,8 @@ public class lps {
 
         Plist.add('#');
 
+        System.out.println(Plist);
+
         int[] Parr = new int[Plist.size()];
 
         int r=0;
@@ -60,8 +62,9 @@ public class lps {
 
         }
 
-int max=0;
-int index=0;
+    int max=0;
+    int index=0;
+
         for(int i =0;i<Parr.length;i++){
 
             if(Parr[i] > max)

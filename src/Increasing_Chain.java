@@ -1,7 +1,7 @@
 import java.util.*;
 public class Increasing_Chain {
 
-    private static ArrayList<Integer> a = new ArrayList<>();
+    private static final ArrayList<Integer> a = new ArrayList<>();
     private  static  int k  = 0 ;
     public static void main(String[] args)
     {
@@ -44,7 +44,6 @@ public class Increasing_Chain {
         }
         else {
 
-            return;
         }
     }
 

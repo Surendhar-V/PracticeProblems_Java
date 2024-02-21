@@ -23,7 +23,7 @@ public class arr_ab{
           return true ; 
       }
       else{
-        return true && isaccending(arr);
+        return isaccending(arr);
       }
       
       

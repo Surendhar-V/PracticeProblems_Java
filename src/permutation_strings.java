@@ -3,7 +3,7 @@ public class permutation_strings{
     public static void main(String[] args){
 
         // printing the permutations of string using recursion
-        StringBuilder p = new StringBuilder("");
+        StringBuilder p = new StringBuilder();
         permutations(p, "abc");
     }
 
@@ -12,7 +12,6 @@ public class permutation_strings{
         if(up.isEmpty()){
 
             System.out.println(p);
-
             return;
 
         }

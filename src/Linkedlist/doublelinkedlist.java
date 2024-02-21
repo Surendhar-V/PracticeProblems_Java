@@ -9,9 +9,6 @@ public class doublelinkedlist {
     private Node temp ;
     private int size = 0;
 
-
-
-
     public void insertFirst(int value){
 
         Node node = new Node(value);
@@ -44,7 +41,6 @@ public class doublelinkedlist {
 
         if(head == null){
             head = tail ;
-
         }
 
     }
@@ -60,7 +56,6 @@ public class doublelinkedlist {
 
         if(pos >= size){
             insertLast(value);
-
         } else if (pos == 1) {
             insertFirst(value);
 
@@ -126,16 +121,13 @@ public class doublelinkedlist {
     public void printreverse(){
 
         temp=tail;
-        while(temp != null){
 
+        while(temp != null){
             System.out.print(temp.value + "  ");
             temp = temp.previous;
-
-
         }
+
         System.out.println();
-
-
 
     }
 

@@ -7,6 +7,7 @@
             ->  Cyclic sort can not be applicable , if there is more than one missing number unless
                  it has duplicate elements at the count of the missing numbers.
                  for example , int[] arr = {1,2,3,4,3,2,7,8};   (result of sorting...)
+
                  ******The resulting array will not be in sorted order.*****
 
 
@@ -66,7 +67,3 @@ public class allmissingnumbers {
         arr[second]=temp;
     }
 }
-
-
-
-

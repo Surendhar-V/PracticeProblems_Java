@@ -8,7 +8,7 @@ public class HashMapFinal {
     ArrayList<LinkedList<Entity>> list;
 
     private int size = 0;
-    private float lf = 0.5f;
+    private final float lf = 0.5f;
 
     HashMapFinal(){
 

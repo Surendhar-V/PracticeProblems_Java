@@ -1,6 +1,6 @@
 /*
 
-If we need to override the compareto method ,
+If we need to override the compare to method ,
 we need to implement the comparable interface .
 
 Note : Arrays.sort() also uses the compareto method ,
@@ -11,10 +11,7 @@ Note : Arrays.sort() also uses the compareto method ,
  */
 
 
-
-
-
-package comparator;
+package comparable;
 
 public class Student implements Comparable<Student> {
 

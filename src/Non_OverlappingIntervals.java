@@ -73,11 +73,7 @@ public class Non_OverlappingIntervals {
         }
 
 
-        for(int l= 0; l<mix.length ; l++){
-
-            arr[s+l] = mix[l];
-
-        }
+        System.arraycopy(mix, 0, arr, s + 0, mix.length);
 
     }
 
