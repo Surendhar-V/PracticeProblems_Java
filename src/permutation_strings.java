@@ -1,19 +1,22 @@
+import java.util.stream.Stream;
+
 public class permutation_strings{
 
+    private static int count = 0;
     public static void main(String[] args){
 
         // printing the permutations of string using recursion
         StringBuilder p = new StringBuilder();
-        permutations(p, "abc");
+        permutations(p, "ginrSt");
+
     }
 
     private static void permutations(StringBuilder p  , String up  )
     {
         if(up.isEmpty()){
-
-            System.out.println(p);
+            count++;
+            System.out.println(p + " " + count);
             return;
-
         }
 
 

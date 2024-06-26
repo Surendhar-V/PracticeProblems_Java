@@ -71,17 +71,15 @@ public class mergesort_inplace {
         }
 
 
-        int m =0 ;
-        while(m != k){
-            arr[start+m] = mix[m];
-            m++;
-        }
-
-//        for (int l = 0; l < mix.length; l++) {
-//            arr[start+l] = mix[l];
+//        int m =0 ;
+//        while(m != k){
+//            arr[start+m] = mix[m];
+//            m++;
 //        }
 
-
+        for (int l = 0; l < mix.length; l++) {
+            arr[start+l] = mix[l];
+        }
 
     }
 }

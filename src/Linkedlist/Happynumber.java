@@ -1,8 +1,6 @@
 package Linkedlist;
 
 class Happynumber {
-
-
     public static void main(String[] args){
 
         System.out.println(isHappy(19));
@@ -27,8 +25,6 @@ class Happynumber {
 
 
         return false ;
-
-
 
     }
 

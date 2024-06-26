@@ -1,12 +1,18 @@
-import java.util.*;
-import java.util.stream.IntStream;
+import java.util.Arrays;
 
-public class Main {
-
+public class Main{
     public static void main(String[] args) {
 
-
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        System.out.println(Math.ceil(Math.log(1)));
+        System.out.println(Math.ceil(Math.log(2)));
+        System.out.println(Math.ceil(Math.log(3)));
+        System.out.println(Math.ceil(Math.log(4)));
+        System.out.println(Math.ceil(Math.log(5)));
+        System.out.println(Math.ceil(Math.log(6)));
+        System.out.println(Math.ceil(Math.log(7)));
+        System.out.println(Math.ceil(Math.log(8)));
+        System.out.println(Math.ceil(Math.log(9)));
 
     }
+
 }

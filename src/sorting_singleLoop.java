@@ -4,7 +4,6 @@ public class sorting_singleLoop {
 
     public static void main(String[] args) {
 
-
         sort(new int[] {9,8,7,6,5,4,1,2,3});
     }
     private static void sort(int[] arr){
@@ -16,8 +15,6 @@ public class sorting_singleLoop {
                 swap(i,i+1,arr);
                 i=-1;
             }
-
-
 
         }
         System.out.println(Arrays.toString(arr));

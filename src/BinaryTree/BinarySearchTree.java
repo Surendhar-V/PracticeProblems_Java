@@ -23,6 +23,7 @@ public class BinarySearchTree {
             root = new Node(value);
             return;
         }
+
         add(value , root);
 
     }
@@ -113,12 +114,12 @@ public class BinarySearchTree {
             return;
         }
 
-
         postorderTraversal(node.left);
         postorderTraversal(node.right);
         System.out.print(node.value+" ");
 
     }
+
     private void inorder(Node node){
 
         if(node == null){
@@ -130,6 +131,7 @@ public class BinarySearchTree {
         inorder(node.right);
 
     }
+
     public void preetyPrint(){
 
         PreetyPrint(root ,0);
@@ -166,9 +168,6 @@ public class BinarySearchTree {
         return Math.abs( getHeight(node.left) - getHeight(node.right)   ) <=1 && balanced(node.left) && balanced(node.right);
 
     }
-
-
-
 
     static class Node {
 

@@ -3,8 +3,6 @@ import java.util.Arrays;
 public class KMP{
 
     public static void main(String[] args) {
-
-
         String s2 = "AAAA";
         String s1 = "AAAAABAAABA";
         int res = kmp(s1 , s2);
@@ -39,12 +37,10 @@ public class KMP{
                 j++;
 
             }else{
-
                 if(i==0){
                     j++;
                 }else{
                     i = crr[i-1];
-
                 }
             }
 

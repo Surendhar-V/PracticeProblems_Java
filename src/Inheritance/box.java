@@ -19,9 +19,11 @@ int h ;
         this.w = 1;
         this.h = 1;
 
-
     }
 
 
+    public final void finalMethod(){
+        System.out.println("final Method from Parent class");
+    }
 
 }

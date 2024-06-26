@@ -5,9 +5,7 @@ public class MaximumSlidingWindow{
 
         int[] arr = {1,3,5,2,1,8,6,9};
         int k = 3;
-
         helper(arr ,k);
-
     }
 
     private static void helper(int[] arr , int k){
@@ -17,8 +15,7 @@ public class MaximumSlidingWindow{
         int i=0;
 
         for(;i<k;i++){
-
-            while (!window.isEmpty() && arr[window.getLast()] <= arr[i]){
+            while(!window.isEmpty() && arr[window.getLast()] <= arr[i]){
                 window.removeLast();
             }
             window.addLast(i);
@@ -27,22 +24,15 @@ public class MaximumSlidingWindow{
         int n = arr.length;
 
         for(;i<n;i++){
-
             System.out.print(arr[window.getFirst()]+" ");
+            if(!window.isEmpty() && window.getFirst() < i-k+1){
+                window.removeFirst();
+            }
             while( !window.isEmpty() && arr[window.getLast()] <= arr[i] ){
                 window.removeLast();
             }
-
-            while(!window.isEmpty() && window.getFirst() < i-k+1){
-                window.removeFirst();
-            }
-
             window.addLast(i);
-
         }
-
         System.out.println(arr[window.getFirst()]);
-
-
     }
 }

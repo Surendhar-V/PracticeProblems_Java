@@ -58,8 +58,6 @@ public class HashMap
 
     static class Entity{
 
-
-
         String key;
         String value;
 

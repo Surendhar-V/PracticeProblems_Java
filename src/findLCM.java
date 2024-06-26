@@ -18,6 +18,7 @@ public class findLCM {
         }
 
         return GCD(b , a%b);
+
     }
 
 }

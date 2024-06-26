@@ -1,12 +1,18 @@
+//      ********THERE IS A ERROR HERE********
+
+//We need to do both the traversal(from right to left and left to right)
+//Only after that we will reduce the string
+
 public class Invalid_Prarathesis {
 
     public static void main(String[] args) {
 
-        String s= "()())))))))))))))()";
+        String s= "()()))(()";
 
         System.out.println(helper(s));
 
     }
+
     private static String helper(String s){
 
         int temp = 0;
@@ -15,7 +21,7 @@ public class Invalid_Prarathesis {
 
         int[] n = new int[s.length()];
 
-        for(int i= 0 ; i<s.length() ; i++){
+         for(int i= 0 ; i<s.length() ; i++){
 
             if(s.charAt(i) == '('){
                 temp++;

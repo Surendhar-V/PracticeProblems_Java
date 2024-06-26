@@ -1,78 +1,78 @@
 package BinaryTree;
 
 public class AVL {
-    private Node root ;
+    private Node root;
 
-    public void insertArr(int[] arr){
+    public void insertArr(int[] arr) {
 
-        for(int a : arr){
+        for (int a : arr) {
             add(a);
         }
 
+    }
 
+    public void preetyPrint() {
+
+        PreetyPrint(root, 0);
 
     }
 
-    public void preetyPrint(){
+    private void PreetyPrint(Node root, int index) {
 
-        PreetyPrint(root ,0);
-
-    }
-    private void PreetyPrint(Node root , int index){
-
-        if(root==null){
+        if (root == null) {
             return;
         }
 
-        PreetyPrint(root.right ,index+1);
+        PreetyPrint(root.right, index + 1);
 
-        for(int i = 0 ; i<index-1 ; i++){
+        for (int i = 0; i < index - 1; i++) {
             System.out.print("|\t\t");
         }
 
-        if(index!=0)
-            System.out.println("|------"+root.value+"("+root.height+")");
-        else System.out.println(root.value+"("+root.height+")");
+        if (index != 0)
+            System.out.println("|------" + root.value + "(" + root.height + ")");
+        else System.out.println(root.value + "(" + root.height + ")");
 
-        PreetyPrint(root.left , index+1);
+        PreetyPrint(root.left, index + 1);
 
     }
 
-    public Node add(int value){
+    public Node add(int value) {
 
-        root =  add(root , value);
+        root = add(root, value);
         return root;
 
     }
 
-    public Node add(Node node , int value){
-        if(node == null){
+    public Node add(Node node, int value) {
+
+        if (node == null) {
             return new Node(value);
         }
 
-        if(value > node.value){
-            node.right = add(node.right , value);
+        if (value > node.value) {
+            node.right = add(node.right, value);
         }
 
-        if(value < node.value){
-            node.left = add(node.left , value);
+        if (value < node.value) {
+            node.left = add(node.left, value);
         }
 
-        node.height = Math.max(getHeight(node.left) , getHeight(node.right))+1;
+        node.height = Math.max(getHeight(node.left), getHeight(node.right)) + 1;
         return rotate(node);
 
     }
 
-    private Node rotate(Node node){
+    private Node rotate(Node node) {
 
-        if(getHeight(node.left) - getHeight(node.right) > 1){
+        if (getHeight(node.left) - getHeight(node.right) > 1) {
             // Left heavy
 
-            if(getHeight(node.left.left) > getHeight(node.left.right)){
+            if (getHeight(node.left.left) > getHeight(node.left.right)) {
                 // left-left
                 return rightRotate(node);
             }
-            if(getHeight(node.left.left) < getHeight(node.left.right)){
+            if (getHeight(node.left.left) < getHeight(node.left.right)) {
                 // left-right
                 node.left = leftRotate(node.left);
                 return rightRotate(node);
@@ -81,15 +81,15 @@ public class AVL {
         }
 
 
-        if(getHeight(node.right) - getHeight(node.left) > 1){
+        if (getHeight(node.right) - getHeight(node.left) > 1) {
             // Right heavy
 
-            if(getHeight(node.right.left) < getHeight(node.right.right)){
+            if (getHeight(node.right.left) < getHeight(node.right.right)) {
                 // right-right
                 return leftRotate(node);
             }
-            if(getHeight(node.right.left) > getHeight(node.left.right)){
-                // left-right
+            if (getHeight(node.right.left) > getHeight(node.left.right)) {
+                // right-left
                 node.right = rightRotate(node.right);
                 return leftRotate(node);
             }
@@ -99,7 +99,7 @@ public class AVL {
         return node;
     }
 
-    private Node rightRotate(Node p){
+    private Node rightRotate(Node p) {
 
         Node c = p.left;
         Node t = c.right;
@@ -107,28 +107,28 @@ public class AVL {
         c.right = p;
         p.left = t;
 
-        p.height = Math.max(getHeight(p.left), getHeight(p.right) + 1);
-        c.height = Math.max(getHeight(c.left), getHeight(c.right) + 1);
+        p.height = Math.max(getHeight(p.left), getHeight(p.right)) + 1;
+        c.height = Math.max(getHeight(c.left), getHeight(c.right)) + 1;
 
         return c;
     }
 
-    private Node leftRotate(Node c){
+    private Node leftRotate(Node c) {
         Node p = c.right;
         Node t = p.left;
 
         p.left = c;
         c.right = t;
 
-        p.height = Math.max(getHeight(p.left),getHeight(p.right) + 1);
-        c.height = Math.max(getHeight(c.left), getHeight(c.right) + 1);
+        p.height = Math.max(getHeight(p.left), getHeight(p.right)) + 1;
+        c.height = Math.max(getHeight(c.left), getHeight(c.right)) + 1;
 
         return p;
     }
 
-    private int getHeight(Node node){
+    private int getHeight(Node node) {
 
-        if(node == null){
+        if (node == null) {
             return -1;
         }
 
@@ -140,10 +140,10 @@ public class AVL {
     class Node {
         int value;
         int height;
-        Node left ;
+        Node left;
         Node right;
 
-        Node(int value){
+        Node(int value) {
             this.value = value;
         }
 

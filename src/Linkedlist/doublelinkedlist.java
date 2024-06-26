@@ -2,7 +2,6 @@ package Linkedlist;
 
 public class doublelinkedlist {
 
-
     private Node head ;
     private Node tail ;
 

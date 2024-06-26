@@ -1,6 +1,8 @@
 package XO;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -9,7 +11,7 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         //int[][] board={{2,2,2},{2,2,2},{2,2,2}};
-        int[][] board = {{0,0,0,0,0}, {0,0,0,0,0}, {0,0,0,0,0}, {0,0,0,0,0}, {0,0,0,0,0}};
+        int[][] board = {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}};
         play(board, input);
 
 
@@ -29,20 +31,14 @@ public class Main {
 
             board[currentX - 1][currentY - 1] = currentBlock;
 
-
             board[currentX][currentY] = currentBlock;
-            int a= canWin(board, currentX, currentY, currentBlock);
+            int a = canWin(board, currentX, currentY, currentBlock);
 
-            if(a!=0){
+            if (a != 0) {
                 System.out.println(currentBlock + " Won ");
                 System.out.println(a);
             }
         }
-
-
-
-
-
 
 
     }
@@ -83,7 +79,7 @@ public class Main {
 
                 if ((i == 2 || i == 4) && ((currentX == currentY && i == 4) || (currentX + currentY == 4 && i == 2))) {
                     rightPossibilities.add(a);
-                } else if( (i == 1 || i == 3) && a == i) {
+                } else if ((i == 1 || i == 3) && a == i) {
 
                     rightPossibilities.add(a);
 
@@ -94,25 +90,25 @@ public class Main {
 
         }
 
-        int common = checkCommon(leftPossibilities,rightPossibilities);
+        int common = checkCommon(leftPossibilities, rightPossibilities);
 
         return common;
 
     }
 
-    public static int checkCommon(List<Integer> l1 ,List<Integer> l2 ){
+    public static int checkCommon(List<Integer> l1, List<Integer> l2) {
 
-      int common=0;
+        int common = 0;
 
-       for(int a: l1){
-           for( int b:l2){
-               if (a == b) {
-                   common = a;
-                   break;
-               }
+        for (int a : l1) {
+            for (int b : l2) {
+                if (a == b) {
+                    common = a;
+                    break;
+                }
 
-           }
-       }
+            }
+        }
 
 
         return common;
@@ -140,7 +136,6 @@ public class Main {
             if (board[currentX - 1][currentY + 1] == currentBlock) {
 
 
-
                 return isSafe1(board, currentX - 1, currentY + 1, currentBlock, i);
 
             }
@@ -151,7 +146,6 @@ public class Main {
                 return i;
             }
             if (board[currentX - 1][currentY] == currentBlock) {
-
 
 
                 return isSafe1(board, currentX - 1, currentY, currentBlock, i);
@@ -167,7 +161,6 @@ public class Main {
             }
 
             if (board[currentX - 1][currentY - 1] == currentBlock) {
-
 
 
                 return isSafe1(board, currentX - 1, currentY - 1, currentBlock, i);
@@ -196,7 +189,7 @@ public class Main {
 
         } else if (i == 2) {
 
-            if (currentY == 0 || currentX == board.length-1  ) {
+            if (currentY == 0 || currentX == board.length - 1) {
                 return i;
             }
 
@@ -208,11 +201,10 @@ public class Main {
 
         } else if (i == 3) {
 
-            if (currentX == board.length-1) {
+            if (currentX == board.length - 1) {
                 return i;
             }
             if (board[currentX + 1][currentY] == currentBlock) {
-
 
 
                 return isSafe1(board, currentX + 1, currentY, currentBlock, i);
@@ -221,7 +213,7 @@ public class Main {
 
         } else if (i == 4) {
 
-            if (currentX == board.length-1 || currentY == board.length-1) {
+            if (currentX == board.length - 1 || currentY == board.length - 1) {
 
                 return i;
 

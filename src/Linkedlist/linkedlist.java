@@ -133,11 +133,6 @@ public class linkedlist {
         tail =head ;
     }
 
-
-
-
-
-
     public class Node{
 
         public int  value ;
@@ -153,7 +148,5 @@ public class linkedlist {
 
 
     }
-
-
 
 }

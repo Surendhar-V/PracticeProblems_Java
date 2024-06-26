@@ -1,29 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
 
-class Solution{
+class Solution {
+
+    private List<List<Integer>> res;
+
     public static void main(String[] args) {
 
-        int a = 5;
-        int b = 4;
+        Solution solution = new Solution();
+        solution.res = new ArrayList<>();
+        int size = 3;
+        int sum = 7;
+        solution.compute(size, sum, 1 , new ArrayList<>());
+        System.out.println(solution.res);
 
-        int res = sum(a , b);
-        System.out.println(res);
     }
 
-    private static int sum(int a , int b){
+    private void compute(int size, int sum, int start, List<Integer> curItems) {
 
-        int carry =0;
-        int sum =0;
-
-
-        while(b != 0){
-
-            carry = a&b;
-            a = a^b;
-            b = carry << 1;
+        if (sum == 0 && size == 0) {
+            res.add(new ArrayList<>(curItems));
+            return;
         }
 
+        if(size == 0 && sum != 0){
+            return;
+        }
 
-        return a;
+        for(int i = start ; i<=9 ; i++){
+            curItems.add(i);
+            compute(size-1 , sum-i , i+1 ,curItems);
+            curItems.remove(curItems.size()-1);
+        }
+
     }
+
 
 }

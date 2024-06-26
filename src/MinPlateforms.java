@@ -7,12 +7,11 @@ public class MinPlateforms {
         int[] from = {900 , 1500 ,950 , 1100 , 940 ,  1800};
         int[] to = {910 , 1200 , 1120, 1130 , 1900 , 2000};
 
-
         findPlateforms(from , to);
 
     }
 
-    public static void findPlateforms(int[] from , int[]to){
+    public static void findPlateforms(int[] from , int[] to){
 
         int[] index = new int[from.length];
 
@@ -21,6 +20,7 @@ public class MinPlateforms {
         }
 
         List<Integer> list= new ArrayList<>();
+
         for(int i = 0 ; i<from.length ; i++){
             list.add(i);
         }

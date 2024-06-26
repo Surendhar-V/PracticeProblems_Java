@@ -5,13 +5,13 @@ import java.util.*;
 public class lps {
     public static void main(String[] args) {
 
-        String s = "surendharsuren";
+        String s = "surendhardadmadamdadsnake";
 
         System.out.println(findLps(s));
+
     }
 
     private static String findLps(String s){
-
 
         List<Character> Plist = new LinkedList<>();
 
@@ -30,7 +30,6 @@ public class lps {
         int r=0;
         int c=0;
 
-
         for(int i=1 ; i<Plist.size()-1 ; i++){
 
             if(i < r){
@@ -40,7 +39,7 @@ public class lps {
             }
 
 
-            //Plist and Parr has same length
+            // Plist and Parr has same length
 
             boolean dummy = ( i - (Parr[i]+1) ) > -1 &&  (i + (Parr[i]+1)) < Plist.size();
 
